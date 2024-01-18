@@ -1,7 +1,9 @@
 "use strict";
 
 /Mission 1/
-let product = 'Печенье «Юбилейное», 1 кг', inBasket = true, quantity = 5;
+let product = 'Печенье «Юбилейное», 1 кг';
+let inBasket = true;
+let quantity = 5;
 
 if (inBasket === true) {
     console.log(`${quantity} x ${product}`);
@@ -9,38 +11,43 @@ if (inBasket === true) {
 console.log("\n#################################\n");
 /Mission2/
 
-let username = "Ilya", accountStatus = "regular", cashbackPercentage = 0;
+let username = "Ilya";
+let accountStatus = "regular";
+let cashbackPercentage = 0;
+let translateAccount = "";
 
-console.log(`${username} | ${accountStatus} аккаунт`);
 switch(accountStatus) {
     case "extended":
-        cashbackPercentage = Math.floor((cashbackPercentage + 0.15)*100); 
-        console.log(`Вы получаете ${cashbackPercentage} % с покупок на бонусный счёт`);
+        cashbackPercentage = 0.15; 
+        translateAccount = "улучшенный"
         break;
     case "premium":
-        cashbackPercentage = Math.floor((cashbackPercentage + 0.2)*100);
-        console.log(`Вы получаете ${Math.floor(cashbackPercentage)} % с покупок на бонусный счёт`);
+        cashbackPercentage = 0.2;
+        translateAccount = "премиум"
         break;
     case "vip":
-        cashbackPercentage = Math.floor((cashbackPercentage + 0.3)*100);
-        console.log(`Вы получаете ${Math.floor(cashbackPercentage)} % с покупок на бонусный счёт`);
+        cashbackPercentage = 0.3;
+        translateAccount = "вип"
         break;
     default:
-        cashbackPercentage = Math.floor((cashbackPercentage + 0.1)*100);
-        console.log(`Вы получаете ${Math.floor(cashbackPercentage)} % с покупок на бонусный счёт`);
+        cashbackPercentage = 0.1;
+        translateAccount = "обычный"
         break;
 }
 
+console.log(`${username} | ${translateAccount} аккаунт`);
+console.log(`Вы получаете ${Math.floor(cashbackPercentage*100)} % с покупок на бонусный счёт`);
+
 console.log("\n#################################\n");
 /Mission3/
-let user = 'Killer2001';
+let user = 'admin';
 if (user === 'admin') {
-    console.log("Привет, админ!/n Проверь нет ли жалоб от пользователей!");
+    console.log("Привет, админ!\nПроверь нет ли жалоб от пользователей!");
 } else {
     console.log('Здравствуйте ' + user + '! У нас новые поступления халвы!');
 }
 
-let newOrders = 3;
+let newOrders = 6;
 let errorOrders = 3;
 // показываем сколько новых заказов, а сколько заказов с ошибкой
 if (newOrders > errorOrders) {
